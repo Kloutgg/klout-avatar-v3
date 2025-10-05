@@ -32,7 +32,52 @@ export default async function handler(req: NextRequest) {
 				position: "relative",
 			}}
 		>
-			{text || ""}
+			{/* Bold text effect using 3 overlapping text elements */}
+			<div
+				style={{
+					position: "absolute",
+					top: "50%",
+					left: "50%",
+					transform: "translate(-46%, -46%)",
+					color: "rgba(0, 0, 0, 0.3)",
+					fontSize: text ? size / text.length : size,
+					fontWeight: "bold",
+					fontFamily: "sans-serif",
+					zIndex: 1,
+				}}
+			>
+				{text || ""}
+			</div>
+			<div
+				style={{
+					position: "absolute",
+					top: "50%",
+					left: "50%",
+					transform: "translate(-51%, -51%)",
+					color: "rgba(0, 0, 0, 0.3)",
+					fontSize: text ? size / text.length : size,
+					fontWeight: "bold",
+					fontFamily: "sans-serif",
+					zIndex: 2,
+				}}
+			>
+				{text || ""}
+			</div>
+			<div
+				style={{
+					position: "absolute",
+					top: "50%",
+					left: "50%",
+					transform: "translate(-50%, -50%)",
+					color: "white",
+					fontSize: text ? size / text.length : size,
+					fontWeight: "bold",
+					fontFamily: "sans-serif",
+					zIndex: 3,
+				}}
+			>
+				{text || ""}
+			</div>
 			<img
 				src="https://klout.gg/android-chrome-512x512.svg"
 				alt="logo"
