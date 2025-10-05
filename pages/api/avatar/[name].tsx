@@ -36,8 +36,8 @@ export default async function handler(req: NextRequest) {
 			<img
 				src="https://klout.gg/android-chrome-512x512.svg"
 				alt="logo"
-				width={50}
-				height={50}
+				width={30}
+				height={30}
 				style={{
 					position: "absolute",
 					top: 5,
